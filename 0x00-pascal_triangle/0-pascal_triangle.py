@@ -10,7 +10,7 @@ Example:
 
 
 def pascal_triangle(n):
-    """creates a list of lists of integers representing Pascal’s triangle of n.
+    """Create a list of lists of integers representing Pascal's triangle of n.
 
     Args:
         n (int): number of rows.
