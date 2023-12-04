@@ -26,8 +26,8 @@ def pascal_triangle(n):
         else:
             row = [1]
             for x in range(i - 1):
-                row.append(pascals_triangle[-1][x]
-                           + pascals_triangle[-1][x + 1])
+                row.append(pascals_triangle[-1][x] +
+                           pascals_triangle[-1][x + 1])
             row.append(1)
             pascals_triangle.append(row)
     return pascals_triangle
