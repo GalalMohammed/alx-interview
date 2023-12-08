@@ -25,9 +25,9 @@ def canUnlockAll(boxes):
     keys = boxes[0].copy()
     while len(keys) > 0:
         key = keys.pop()
-        if locked[key]:
+        if key < len(locked) and locked[key]:
             locked[key] = 0
-            for newKey in boxes[key]:
-                if locked[newKey]:
-                    keys.append(newKey)
+            for new_key in boxes[key]:
+                if new_key < len(locked) and locked[new_key]:
+                    keys.append(new_key)
     return locked.count(1) == 0
