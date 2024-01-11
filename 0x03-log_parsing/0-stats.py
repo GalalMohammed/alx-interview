@@ -35,7 +35,7 @@ try:
         line_count += 1
         parts = line.split()
 
-        if len(parts) >= 9:
+        if len(parts) >= 9 and parts[-2].isdigit() and parts[-1].isdigit():
             status = int(parts[-2])
             if status in status_codes:
                 total_size += int(parts[-1])
