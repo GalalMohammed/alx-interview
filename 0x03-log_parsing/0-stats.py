@@ -45,4 +45,6 @@ try:
             print_statistics(total_size, status_codes)
 
 except KeyboardInterrupt:
+    pass
+finally:
     print_statistics(total_size, status_codes)
