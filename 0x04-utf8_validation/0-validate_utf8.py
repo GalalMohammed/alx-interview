@@ -22,9 +22,11 @@ def validUTF8(data):
     i = 0
     while i < len(data):
         data_byte = data[i] & 255
-        while data_byte & 128:
+        if (data_byte >> 6) & 3 == 2:
+            return False
+        while data_byte & 128 and data_byte & 64:
             i += 1
-            if not ((data[i] >> 6) & 3) == 2:
+            if not i < len(data) or not ((data[i] >> 6) & 3) == 2:
                 return False
             data_byte <<= 1
         i += 1
