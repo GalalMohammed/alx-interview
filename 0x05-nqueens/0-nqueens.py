@@ -45,4 +45,4 @@ while i >= 0:
             i -= 2
     i += 1
 for solution in solutions:
-    print([ [i, j] for i, j in enumerate(solution)])
+    print([[i, j] for i, j in enumerate(solution)])
