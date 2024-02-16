@@ -11,7 +11,6 @@ def isWinner(x, nums):
     maria = 0
     ben = 0
     for i in range(x):
-        print(i)
         primes = 0
         for j in list(range(nums[i] + 1)):
             if j > 1:
